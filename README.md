@@ -119,7 +119,7 @@ In this project, NGINX serves as the web server for the WordPress site, handling
 Before diving into the setup, take some time to explore these resources for a deeper understanding of how NGINX works: ⬇️
 - [NGINX Official Documentation](https://nginx.org/en/docs/)
 - [NGINX Tutorial (Youtube)](https://www.youtube.com/watch?v=9t9Mp0BGnyI&t=1639s)
-- [Understanding NGINX Configuration] (https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts)
+- [Understanding NGINX Configuration](https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts)
 
 By familiarizing yourself with these resources, you'll better understand how to utilize NGINX effectively in your projects.
 
