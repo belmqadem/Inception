@@ -119,7 +119,7 @@ In this project, NGINX serves as the web server for the WordPress site, handling
 Before diving into the setup, take some time to explore these resources for a deeper understanding of how NGINX works: ⬇️
 - [NGINX Official Documentation](https://nginx.org/en/docs/)
 - [NGINX Tutorial (Youtube)](https://www.youtube.com/watch?v=9t9Mp0BGnyI&t=1639s)
-- [Understanding NGINX Configuration] (https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts)
+- [Understanding NGINX Configuration](https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts)
 
 By familiarizing yourself with these resources, you'll better understand how to utilize NGINX effectively in your projects.
 
@@ -201,6 +201,7 @@ CMD ["nginx", "-g", "daemon off;"]
 **- Purpose of This Command:**
   - Runs NGINX in the foreground (`daemon off`), ensuring the container stays alive.
   - If NGINX runs in the background (`daemon on`), the container will stop immediately after execution.
+
 **- Why Use CMD?**
   - The `CMD` instruction sets the default command that the container executes when started.
   - It ensures NGINX is ready to serve requests as soon as the container starts.
@@ -255,9 +256,9 @@ server {
     ...
 }
 ```
--`listen 443 ssl;`: Specifies that the server will listen for HTTPS traffic on port 443.
-- **SSL Protocols**: Restricts connections to use TLSv1.2 and TLSv1.3 for better security.
-- **SSL Certificate and Key**: Defines the paths to the SSL certificate and private key files.
+- `listen 443 ssl;`: Specifies that the server will listen for HTTPS traffic on port 443.
+- `SSL Protocols`: Restricts connections to use TLSv1.2 and TLSv1.3 for better security.
+- `SSL Certificate and Key`: Defines the paths to the SSL certificate and private key files.
 - `root` and `index`: Specifies the root directory for WordPress files and default files to serve.
 - `server_name`: Specifies the domain name. For testing purposes, you can set it to localhost for now.
 
@@ -266,6 +267,7 @@ server {
 Defines rules for serving specific types of requests.
 
 **`Root Location`**
+
 Handles requests for static files or directories:
 
 ```nginx
@@ -448,10 +450,10 @@ Follow these steps to verify that your MariaDB container is working correctly:
 ```bash
 docker build -t mariadb-img .
 docker run -d --name mariadb-container -p 3306:3306 \
-  -e MYSQL_DATABASE=wordpress_db \
-  -e MYSQL_USER=wp_user \
-  -e MYSQL_PASSWORD=wp_pass \
-  -e MYSQL_ROOT_PASSWORD=root_pass mariadb-img
+  -e MYSQL_DATABASE=mydb \
+  -e MYSQL_USER=myuser \
+  -e MYSQL_PASSWORD=mypass \
+  -e MYSQL_ROOT_PASSWORD=myrootpass mariadb-img
 ```
 
 ### Step 2: Verify the Container
@@ -481,7 +483,7 @@ Bellow, You will find some useful commands that you need to play with your maria
 
 - [MYSQL Tutorial](https://downloads.mysql.com/docs/mysql-tutorial-excerpt-8.0-en.a4.pdf)
 
-⚠️ In your journey working on this project, try to learn these technologies, read a lot of documentation, and get hands-on experience testing your containers. Enjoy every step of the process. Docker is a useful and in-demand technology. Learning it can improve your job prospects.
+💡💡 In your journey working on this project, try to learn these technologies, read a lot of documentation, and get hands-on experience testing your containers. Enjoy every step of the process. Docker is a useful and in-demand technology. Learning it can improve your job prospects. 💡💡
 
 ---
 
