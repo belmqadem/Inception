@@ -906,7 +906,27 @@ sudo usermod -aG docker $USER
 ```bash
 docker info
 ```
-## 5. Project Rules and Guidelines
+
+## 5. Set Up and Run Your Docker Containers
+To start your WordPress setup, follow these steps:
+
+### Steps:
+1. Navigate to your project directory:
+```bash
+cd /path/to/your/project
+```
+
+2. Build and start your containers:
+```bash
+docker-compose up -d --build
+```
+
+3. Check running containers:
+```bash
+docker ps
+```
+
+## 6. Project Rules and Guidelines
 #### Why These Rules Exist:
 1. **No `latest` Tag:** Using the `latest` tag for Docker images can lead to version inconsistencies. Always specify explicit versions for stability and reproducibility.
 
@@ -927,6 +947,47 @@ docker info
 
 - All traffic must be routed through the NGINX container on **port 443** using **TLSv1.2** or **TLSv1.3**.
 - This ensures secure communication by encrypting data and protecting against attacks.
+
+## 7. Accessing Your WordPress Website and Admin Dashboard
+
+Once everything is set up, you can access your WordPress website and the admin dashboard as follows:
+
+### Accessing Your Website
+
+1. Open your web browser.
+2. Enter your domain name in the address bar:
+```uri
+https://login.42.fr
+```
+(Replace `login` with your actual 42 school login.)
+
+3. You should see your WordPress homepage.
+
+### Accessing the WordPress Admin Dashboard
+
+1. In your web browser, navigate to:
+```uri
+https://login.42.fr/wp-admin
+```
+2. Enter your admin credentials (created during WordPress installation).
+3. Once logged in, you’ll have access to the WordPress dashboard.
+
+### Navigating and Testing Your WordPress Installation
+
+**Basic Navigation:**
+
+- **Posts:** Create new blog posts by going to `Posts > Add New`.
+- **Pages:** Add new pages by navigating to `Pages > Add New`.
+- **Themes:** Change the site appearance under `Appearance > Themes`.
+- **Plugins:** Extend functionality by installing plugins in `Plugins > Add New`.
+- **Users:** Manage users under `Users > All Users`.
+
+**Testing Your Setup:**
+
+- Create a test post and publish it.
+- Install a basic plugin (e.g., Elementor) and activate it.
+- Change the site’s theme and observe the changes.
+- Upload a media file (image, PDF) and verify it appears in `Media > Library`.
 
 Final Notes
 By following these steps, you’ll have a fully functional and secure WordPress environment. The setup ensures adherence to project requirements while maintaining best practices for security, usability, and maintainability.
